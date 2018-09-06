@@ -227,31 +227,48 @@ description
 object connections:
 
 - 1. first outlet to first inlet:
-
-[*object*]
-|
-[*object*]
+```
+[*object*]  
+|  
+[*object*]  
+```
 
 or
 
-[*object* #a]
-[*object* #b]
-[X a->b]
+```
+[*object* #a]  
+[*object* #b]  
+[X a->b] 
+```
 
 - 2. arbitrary outlet to arbitrayr inlet:
 
-[*object*]
-^|..
-[*object*]
+```
+[*object*]  
+^|..  
+[*object*]  
+```
 
 This example connects 2nd outlet with 3rd inlet.
 Number of '^' specifies the outlet index (starting with zero).
 
 or
 
+```
 [*object* #a:1]
 [*object* #b:2]
 [X a->b]
+```
+
+### xlets database
+
+ascii->pd converter checks objects' port count with special 'xlet.db' files. By default the appropriate file is generated for each pddoc file if you specify the inlets and outlets. File contains just strings like that:
+```
+object-name . ..
+```
+First periods specify inlet count, second one - outlets.
+
+When you use several custom objects in your pddoc you need to create a single file with all objects xlets and specify it with --xlet-db flag passed to pd_doc2pd
 
 
 
