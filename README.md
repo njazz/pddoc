@@ -267,7 +267,7 @@ ascii->pd converter checks objects' port count with special 'xlet.db' files. By 
 ```
 object-name . ..
 ```
-First periods specify inlet count, second one - outlets.
+[object] [inlet count] [outlet count]
 
 When you use several custom objects in your pddoc you need to create a single file with all objects xlets and specify it with --xlet-db flag passed to pd_doc2pd
 
