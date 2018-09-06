@@ -224,6 +224,37 @@ description
 - [T] - toggle
 - [B] - bang
 
+object connections:
+
+- 1. first outlet to first inlet:
+
+[*object*]
+|
+[*object*]
+
+or
+
+[*object* #a]
+[*object* #b]
+[X a->b]
+
+- 2. arbitrary outlet to arbitrayr inlet:
+
+[*object*]
+^|..
+[*object*]
+
+This example connects 2nd outlet with 3rd inlet.
+Number of '^' specifies the outlet index (starting with zero).
+
+or
+
+[*object* #a:1]
+[*object* #b:2]
+[X a->b]
+
+
+
 
 
     
