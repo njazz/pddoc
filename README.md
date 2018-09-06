@@ -224,9 +224,9 @@ description
 - [T] - toggle
 - [B] - bang
 
-object connections:
+##### object connections
 
-- 1. first outlet to first inlet:
+* first outlet to first inlet:
 ```
 [*object*]  
 |  
@@ -241,7 +241,7 @@ or
 [X a->b] 
 ```
 
-- 2. arbitrary outlet to arbitrayr inlet:
+* arbitrary outlet to arbitrayr inlet:
 
 ```
 [*object*]  
@@ -250,7 +250,8 @@ or
 ```
 
 This example connects 2nd outlet with 3rd inlet.
-Number of '^' specifies the outlet index (starting with zero).
+Number of '^' specifies the outlet index (starting with zero).  
+Number of '.' specifies the inlet index (starting with zero).
 
 or
 
